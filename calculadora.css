@@ -1,0 +1,89 @@
+/*Para darle una forma reset al css antes que todo*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+/*Darle estilo al body */
+body{
+    /*Para que siempre tenga un alto de todo el view port*/
+    min-height: 100vh;
+    background-color: #090c31;
+    /*Esto es para que la calculadura este centrada*/
+    display: grid;
+    place-items: center;
+
+}
+
+.calculadora{
+    background-color: #15173c;
+    color: white;
+    width: 350px;
+    /*Para que se agrande igual que la pantalla*/
+    max-width: 100%;
+    /*Seperar los botones entre si */
+    padding: 1.5rem;
+    border-radius: 1rem;
+    /*Para poner en orden los botones*/
+    display: grid;
+    /*Para tener 4 columnas iguales*/
+    grid-template-columns: repeat(4,1fr);
+    /*Para separar un poco los botones entre si*/
+   gap: .5rem;
+}
+
+.pantalla{
+    /*Ponemos 1/ -1 por si no sabemos cuantas columnas son en total */
+    grid-column: 1 / -1;
+    background-color: #090c31;
+    /*Para hacerle un poco de relleno*/
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-align: right;
+    border-radius: .5rem;
+    /*Asi separamos un poco mas los btns*/
+    margin-bottom: 1rem;
+    font-family: monospace;
+    font-weight: 600;
+}
+
+.btn{
+    background-color: #15173c;
+    color: white;
+    /*Asi le quitamos el border que los btns traen por defecto*/
+    border: 0;
+    padding: 1.5rem .5rem;
+    /*Para centralizar todo dentro*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    /*Para agregarle una manito cuando este encima de los btns*/
+    cursor:pointer;
+}
+
+/*Para hacerle un sombreado cuando le pasemos por encima*/
+.btn:hover{
+    background-color: #090c31;
+}
+
+/*Esto es para que ocupe dos columnas*/
+ #cero{
+    grid-column: span 2;
+ }
+
+ /*Esto es para que ocupe dos columnas*/
+ #igual{
+    grid-row: span 2;
+    background-color: palevioletred;
+ }
+
+ #igual:hover{
+      background-color: pink;
+ }
+
+
+
+/* */
+/* */
